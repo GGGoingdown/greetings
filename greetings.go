@@ -8,3 +8,14 @@ func Hello(name string) string {
 	message := fmt.Sprintf("Hi, %v. Welcome!", name)
 	return message
 }
+
+func Hellos(names []string) (map[string]string, error) {
+	messages := make(map[string]string)
+	for _, name := range names {
+		message := Hello(name)
+		messages[name] = message
+	}
+
+	return messages, nil
+
+}
