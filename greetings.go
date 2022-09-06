@@ -17,5 +17,9 @@ func Hellos(names []string) (map[string]string, error) {
 	}
 
 	return messages, nil
+}
 
+func HelloWrold(name string) string {
+	message := fmt.Sprintf("Hello world %v\n", name)
+	return message
 }
